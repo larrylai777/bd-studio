@@ -5,7 +5,7 @@ import { SiteFooter, SiteHeader, assetBase, assets } from "@/components/SiteShel
 const releases = [
   { type: "ORIGINAL NOVEL", title: "第九次出生", date: "第四部・連載中", image: assets.original, href: `${assetBase}original/`, position: "center" },
   { type: "CALMCAT FILM", title: "最後走進銀幕", date: "世界觀開發", image: assets.film, href: `${assetBase}film/`, position: "center" },
-  { type: "TELL PODCAST", title: "讓故事被說出來", date: "錄製籌備", image: assets.podcast, href: `${assetBase}podcast.html`, position: "65% center" },
+  { type: "TELL PODCAST", title: "讓故事被說出來", date: "錄製籌備", image: assets.podcast, href: `${assetBase}podcast/`, position: "65% center" },
   { type: "SERIES BIBLE", title: "一季又一季", date: "企劃開發", image: assets.hero, href: `${assetBase}series/`, position: "74% center" },
 ];
 
