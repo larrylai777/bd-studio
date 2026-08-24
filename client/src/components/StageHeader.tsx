@@ -1,9 +1,9 @@
 /** BÐ-Studio visual reminder: a precise studio navigation that gives equal weight to the source story and every future medium. */
-import { Menu, Moon, Sun, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { useTheme } from "@/contexts/ThemeContext";
 
 const assetBase = import.meta.env.BASE_URL;
+const markUrl = `${assetBase}assets/mark-dark.webp`;
 
 const navigation = [
   ["工作室", assetBase, "studio"],
@@ -14,9 +14,7 @@ const navigation = [
 ] as const;
 
 export default function StageHeader({ current }: { current: "studio" | "original" | "comic" | "series" | "film" }) {
-  const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
-  const markUrl = `${assetBase}assets/mark-${theme === "dark" ? "dark" : "light"}.webp`;
 
   return (
     <header className="studio-header">
@@ -29,9 +27,6 @@ export default function StageHeader({ current }: { current: "studio" | "original
       </nav>
       <div className="studio-header-actions">
         <a className="header-journal" href={`${assetBase}#journal`}>開發日誌</a>
-        <button className="theme-button" onClick={toggleTheme} aria-label="切換日夜主題">
-          {theme === "dark" ? <Sun size={16} strokeWidth={1.7} /> : <Moon size={16} strokeWidth={1.7} />}
-        </button>
         <button className="menu-button" onClick={() => setOpen((value) => !value)} aria-label="開啟主導覽" aria-expanded={open}>
           {open ? <X size={18} /> : <Menu size={18} />}
         </button>
