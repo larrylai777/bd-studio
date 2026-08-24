@@ -13,7 +13,7 @@ const mediaStages = [
   { number: "02", title: "漫畫", english: "COMIC", description: "讓沉默、速度與未知，在一格一格的觀看中被感覺。", status: "視覺開發", href: `${assetBase}comic/`, icon: Layers3 },
   { number: "03", title: "影集", english: "SERIES", description: "讓角色有足夠時間，走過每一季的選擇與代價。", status: "企劃開發", href: `${assetBase}series/`, icon: SeriesMark },
   { number: "04", title: "電影", english: "FILM", description: "把被共同見證的命題，濃縮成一次不可替代的銀幕觀看。", status: "長期開發", href: `${assetBase}film/`, icon: Clapperboard },
-  { number: "05", title: "周邊", english: "MERCH", description: "拉力一方把世界觀與角色記憶，做成可以帶著走的實體物件。", status: "商品開發中", href: `${assetBase}merch/`, icon: MerchMark },
+  { number: "05", title: "周邊", english: "MERCH", description: "拉力一方 L&F 把世界觀與角色記憶，做成可以帶著走的實體物件。", status: "商品開發中", href: `${assetBase}merch/`, icon: MerchMark },
 ];
 
 const journal = [
