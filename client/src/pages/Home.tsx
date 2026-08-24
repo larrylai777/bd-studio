@@ -6,12 +6,13 @@ import { useTheme } from "@/contexts/ThemeContext";
 import { ArrowDownRight, ArrowUpRight, BookOpen, ChevronRight, Menu, Moon, Sparkles, Sun, X } from "lucide-react";
 import { useMemo, useState } from "react";
 
-const markUrl = "/manus-storage/bd-studio-mark_3143f9ea.png";
+const assetBase = import.meta.env.BASE_URL;
+const markUrl = `${assetBase}assets/mark.webp`;
 const visualAssets = {
-  hero: "/manus-storage/bd-studio-hero-cosmos_d385015e.jpg",
-  volume: "/manus-storage/bd-studio-volume-orbit_87148a1e.jpg",
-  dawn: "/manus-storage/bd-studio-reading-dawn_8cc5b2ee.jpg",
-  archive: "/manus-storage/bd-studio-footer-archive_43e01691.jpg",
+  hero: `${assetBase}assets/hero-cosmos.webp`,
+  volume: `${assetBase}assets/volume-orbit.webp`,
+  dawn: `${assetBase}assets/reading-dawn.webp`,
+  archive: `${assetBase}assets/footer-archive.webp`,
 };
 
 const volumes = [
