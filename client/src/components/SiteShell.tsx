@@ -14,7 +14,7 @@ export const assets = {
 };
 
 const links = [
-  ["原作", `${assetBase}original/`], ["播客", `${assetBase}podcast/`], ["影集", `${assetBase}series/`], ["電影", `${assetBase}film/`],
+  ["原作", `${assetBase}original/`], ["播客", `${assetBase}podcast.html`], ["影集", `${assetBase}series/`], ["電影", `${assetBase}film/`],
   ["周邊", `${assetBase}merch/`], ["製作日誌", `${assetBase}journal/`], ["關於工作室", `${assetBase}studio/`], ["更多", `${assetBase}more/`],
 ] as const;
 
