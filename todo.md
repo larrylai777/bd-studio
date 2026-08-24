@@ -10,6 +10,6 @@
 - [ ] 說明 Manus 專案移除需由管理介面完成的步驟。
 - [x] 將首頁 Three.js 軌道視覺升級為可拖曳與指標回應的 3D 互動特效。
 - [x] 驗證桌面／行動版互動、reduced-motion 行為與正式建置，並同步 GitHub。
-- [ ] 將靜態建置產物部署到 GitHub Pages 的 gh-pages 分支。
-- [ ] 經使用者確認後啟用 GitHub Pages 公開發布設定。
-- [ ] 驗證公開部署網址與首頁載入結果。
+- [x] 將靜態建置產物部署到 GitHub Pages 的 gh-pages 分支。
+- [x] 經使用者確認後啟用 GitHub Pages 公開發布設定。
+- [x] 驗證公開部署網址與首頁載入結果。
