@@ -3,14 +3,31 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Comic from "./pages/Comic";
+import Film from "./pages/Film";
 import Home from "./pages/Home";
+import Original from "./pages/Original";
+import Series from "./pages/Series";
 
 /** BÐ-Studio visual reminder: a calm editorial archive that gives narrative and reading actions clear precedence. */
 
 
 function Router() {
   const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
-  return normalizedPath === "/" || normalizedPath === "/bd-studio" ? <Home /> : <NotFound />;
+  const routes: Record<string, React.ComponentType> = {
+    "/": Home,
+    "/bd-studio": Home,
+    "/original": Original,
+    "/bd-studio/original": Original,
+    "/comic": Comic,
+    "/bd-studio/comic": Comic,
+    "/series": Series,
+    "/bd-studio/series": Series,
+    "/film": Film,
+    "/bd-studio/film": Film,
+  };
+  const Page = routes[normalizedPath] ?? NotFound;
+  return <Page />;
 }
 
 // NOTE: About Theme

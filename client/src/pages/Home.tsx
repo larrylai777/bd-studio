@@ -8,6 +8,12 @@ import { useMemo, useState } from "react";
 
 const assetBase = import.meta.env.BASE_URL;
 const markUrl = `${assetBase}assets/mark.webp`;
+const stageLinks = [
+  ["原作", "original"],
+  ["漫畫", "comic"],
+  ["影集", "series"],
+  ["電影", "film"],
+] as const;
 const visualAssets = {
   hero: `${assetBase}assets/hero-cosmos.webp`,
   volume: `${assetBase}assets/volume-orbit.webp`,
@@ -52,10 +58,8 @@ export default function Home() {
         </button>
 
         <nav className="desktop-nav" aria-label="主要導覽">
-          <button onClick={() => navigateTo("volumes")}>書櫃</button>
-          <button onClick={() => navigateTo("reading-log")}>閱讀紀錄</button>
-          <button onClick={() => navigateTo("chapters")}>章節</button>
-          <button onClick={() => navigateTo("about")}>作者</button>
+          {stageLinks.map(([label, slug]) => <a key={slug} href={`${assetBase}${slug}/`}>{label}</a>)}
+          <button onClick={() => navigateTo("about")}>工作室</button>
         </nav>
 
         <div className="header-actions">
@@ -69,14 +73,8 @@ export default function Home() {
 
         {mobileMenuOpen && (
           <div className="mobile-menu" aria-label="行動版導覽">
-            {[
-              ["書櫃", "volumes"],
-              ["閱讀紀錄", "reading-log"],
-              ["章節", "chapters"],
-              ["作者", "about"],
-            ].map(([label, target]) => (
-              <button key={target} onClick={() => navigateTo(target)}>{label}<ArrowDownRight size={17} /></button>
-            ))}
+            {stageLinks.map(([label, slug]) => <a key={slug} href={`${assetBase}${slug}/`}>{label}<ArrowDownRight size={17} /></a>)}
+            <button onClick={() => navigateTo("about")}>工作室<ArrowDownRight size={17} /></button>
           </div>
         )}
       </header>
