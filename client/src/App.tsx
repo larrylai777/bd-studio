@@ -11,8 +11,8 @@ import Series from "./pages/Series";
 
 /** BÐ-Studio visual reminder: a calm editorial archive that gives narrative and reading actions clear precedence. */
 
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   const normalizedPath = window.location.pathname.replace(/\/+$/, "") || "/";
   const routes: Record<string, React.ComponentType> = {
     "/": Home,
