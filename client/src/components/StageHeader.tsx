@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const assetBase = import.meta.env.BASE_URL;
-const markUrl = `${assetBase}assets/mark.webp`;
 
 const navigation = [
   ["工作室", assetBase, "studio"],
@@ -17,11 +16,12 @@ const navigation = [
 export default function StageHeader({ current }: { current: "studio" | "original" | "comic" | "series" | "film" }) {
   const { theme, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
+  const markUrl = `${assetBase}assets/mark-${theme === "dark" ? "dark" : "light"}.webp`;
 
   return (
     <header className="studio-header">
       <a className="brand-lockup" href={assetBase} aria-label="回到比爸工作室首頁">
-        <img src={markUrl} alt="BÐ-Studio 幾何門與軌道符號" className="brand-mark" />
+        <img src={markUrl} alt="BÐ-Studio 交叉鐵鎚工作室符號" className="brand-mark" />
         <span className="brand-wordmark">BÐ / STUDIO</span>
       </a>
       <nav className="studio-nav" aria-label="比爸工作室主導覽">
