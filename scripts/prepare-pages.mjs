@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const outputDir = resolve("dist/public");
 const indexFile = resolve(outputDir, "index.html");
-const staticRoutes = ["original", "podcast", "series", "film", "merch", "privacy", "terms"];
+const staticRoutes = ["original", "podcast", "series", "film", "merch", "journal", "studio", "support", "more", "privacy", "terms"];
 
 if (!existsSync(indexFile)) {
   throw new Error("GitHub Pages build output is missing dist/public/index.html");

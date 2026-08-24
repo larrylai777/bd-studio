@@ -1,0 +1,5 @@
+/** BÐ-Studio journal: a public production log of story development across media. */
+import { ArrowRight } from "lucide-react";
+import { SiteFooter, SiteHeader } from "@/components/SiteShell";
+const entries = [["FIELD NOTE 04","2026.08.24","第四部《第一次出生》：一個人如何決定自己要留下什麼","新的卷冊從黎明後開始。這一次，記憶不再只是被找回，而是被重新命名。"],["AUDIO NOTE 01","IN PRODUCTION","Tell Podcast 的第一道訊號，正在收音","我們把小說中無法直接聽見的選擇，留給聲音與停頓完成。"],["STUDIO NOTE 01","NOW LIVE","原創 IP 不只是一條路，而是一座持續擴張的世界","我們公開製作節點，讓每一位讀者都能看見故事如何前進。"]];
+export default function Journal() { return <div className="page-shell" id="top"><SiteHeader current="journal" /><main className="text-page"><section className="text-hero"><p className="eyebrow">TRANSMISSION LOG</p><h1>製作日誌</h1><p>記錄每一部作品在文字、聲音、影像與物件之間移動的訊號節點。</p></section><section className="journal-list">{entries.map(([type, date, title, body], index) => <article key={title}><span>0{index + 1}</span><div><p>{type} — {date}</p><h2>{title}</h2><p>{body}</p></div><button aria-label={`閱讀 ${title}`}><ArrowRight size={21} /></button></article>)}</section></main><SiteFooter /></div>; }

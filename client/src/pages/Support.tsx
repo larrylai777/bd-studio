@@ -1,0 +1,3 @@
+import { ArrowRight, Mail } from "lucide-react";
+import { SiteFooter, SiteHeader } from "@/components/SiteShell";
+export default function Support() { return <div className="page-shell" id="top"><SiteHeader current="support" /><main className="support-page"><section><p className="eyebrow">SUPPORT THE SIGNAL</p><h1>讓故事<br /><em>繼續長大。</em></h1><p>目前 BÐ-Studio 正在建立第一批支持方式。若你想跟著作品一起前進，先留下你的訊號。</p><a href="mailto:hello@bd-studio.tw"><Mail size={17} /> hello@bd-studio.tw</a></section><aside><span>COMING SOON</span><strong>讀者支持<br />訂閱計畫</strong><p>作品進度、創作筆記與搶先訊號，會由這裡開始。</p><button>接收通知 <ArrowRight size={18} /></button></aside></main><SiteFooter /></div>; }
