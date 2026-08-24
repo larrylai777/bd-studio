@@ -8,6 +8,7 @@ export const assets = {
   logo: `${assetBase}assets/bd-original-hammer-logo-transparent.png`,
   hero: `${assetBase}assets/bd-hero-ninth-birth.jpg`,
   original: `${assetBase}assets/bd-original-cover.jpg`,
+  ninthBirthCover: `${assetBase}assets/ninth-birth-cover.png`,
   podcast: `${assetBase}assets/bd-podcast-stage.jpg`,
   film: `${assetBase}assets/bd-film-stage.jpg`,
 };
