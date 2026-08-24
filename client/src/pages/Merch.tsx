@@ -5,7 +5,7 @@ export default function Merch() {
   return <MediaStage data={{
     slug: "merch", index: "05", label: "周邊", english: "MERCH", status: "商品開發中", statusNote: "L&F · OFFICIAL MERCH LINE",
     title: "讓這個世界，被帶著走。", lead: "拉力一方 L&F 是比爸工作室的官方周邊品牌，把《第九次出生》的世界觀與角色記憶，轉譯成可以留在生活裡的實體物件。",
-    description: "從服飾、印刷到收藏小物，L&F 以原作、漫畫與影集累積的視覺語言為基礎，設計不喧嘩、但辨識度高的周邊商品，讓喜歡這個世界的人有方式把它帶回家。",
+    description: "從服飾、印刷到收藏小物，L&F 以原作、Tell 播客與影集累積的視覺語言為基礎，設計不喧嘩、但辨識度高的周邊商品，讓喜歡這個世界的人有方式把它帶回家。",
     image: "assets/merch-hero.webp", imageAlt: "深色霧面漸層與細座標弧線構成的周邊品牌抽象視覺", focal: "L&F · CARRY THE WORLD WITH YOU", progress: "首波系列設計與打樣", next: "回到原作起點", nextHref: `${import.meta.env.BASE_URL}original/`, icon: null as never, signatureMark: "assets/merch-mark.webp",
     steps: [
       { label: "品牌識別", detail: "建立拉力一方 L&F 的獨立標誌與色彩語言，並與 IP 主視覺維持可辨識的連結。", state: "done" },

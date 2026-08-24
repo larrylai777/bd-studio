@@ -8,13 +8,13 @@ const markUrl = `${assetBase}assets/mark-dark.webp`;
 const navigation = [
   ["工作室", assetBase, "studio"],
   ["原作", `${assetBase}original/`, "original"],
-  ["漫畫", `${assetBase}comic/`, "comic"],
+  ["播客", `${assetBase}podcast/`, "podcast"],
   ["影集", `${assetBase}series/`, "series"],
   ["電影", `${assetBase}film/`, "film"],
   ["周邊", `${assetBase}merch/`, "merch"],
 ] as const;
 
-export default function StageHeader({ current }: { current: "studio" | "original" | "comic" | "series" | "film" | "merch" | "other" }) {
+export default function StageHeader({ current }: { current: "studio" | "original" | "podcast" | "series" | "film" | "merch" | "other" }) {
   const [open, setOpen] = useState(false);
 
   return (

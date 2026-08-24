@@ -3,11 +3,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Comic from "./pages/Comic";
 import Film from "./pages/Film";
 import Home from "./pages/Home";
 import Merch from "./pages/Merch";
 import Original from "./pages/Original";
+import Podcast from "./pages/Podcast";
 import Privacy from "./pages/Privacy";
 import Series from "./pages/Series";
 import Terms from "./pages/Terms";
@@ -22,8 +22,8 @@ function Router() {
     "/bd-studio": Home,
     "/original": Original,
     "/bd-studio/original": Original,
-    "/comic": Comic,
-    "/bd-studio/comic": Comic,
+    "/podcast": Podcast,
+    "/bd-studio/podcast": Podcast,
     "/series": Series,
     "/bd-studio/series": Series,
     "/film": Film,

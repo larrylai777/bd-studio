@@ -2,15 +2,16 @@
 import OrbitalCanvas from "@/components/OrbitalCanvas";
 import MerchMark from "@/components/MerchMark";
 import OriginalMark from "@/components/OriginalMark";
+import PodcastMark from "@/components/PodcastMark";
 import SeriesMark from "@/components/SeriesMark";
 import StageHeader from "@/components/StageHeader";
-import { ArrowDown, ArrowUpRight, BookOpenText, Clapperboard, Handshake, Layers3, Mail, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BookOpenText, Clapperboard, Handshake, Mail, Sparkles } from "lucide-react";
 
 const assetBase = import.meta.env.BASE_URL;
 
 const mediaStages = [
   { number: "01", title: "原作", english: "ORIGINAL", description: "小說是世界觀、角色弧線與每一次改編選擇的起點。", status: "連載中", href: `${assetBase}original/`, icon: OriginalMark },
-  { number: "02", title: "漫畫", english: "COMIC", description: "讓沉默、速度與未知，在一格一格的觀看中被感覺。", status: "視覺開發", href: `${assetBase}comic/`, icon: Layers3 },
+  { number: "02", title: "播客", english: "PODCAST", description: "Tell 用聲音談創作選擇，讓世界觀在文字之外被重新說一次。", status: "節目籌備中", href: `${assetBase}podcast/`, icon: PodcastMark },
   { number: "03", title: "影集", english: "SERIES", description: "讓角色有足夠時間，走過每一季的選擇與代價。", status: "企劃開發", href: `${assetBase}series/`, icon: SeriesMark },
   { number: "04", title: "電影", english: "FILM", description: "把被共同見證的命題，濃縮成一次不可替代的銀幕觀看。", status: "長期開發", href: `${assetBase}film/`, icon: Clapperboard },
   { number: "05", title: "周邊", english: "MERCH", description: "拉力一方 L&F 把世界觀與角色記憶，做成可以帶著走的實體物件。", status: "商品開發中", href: `${assetBase}merch/`, icon: MerchMark },
@@ -18,7 +19,7 @@ const mediaStages = [
 
 const journal = [
   ["FIELD NOTE 04", "第四部《第一次出生》持續連載", "原作", `${assetBase}original/`],
-  ["VISUAL NOTE 01", "《第九次出生》漫畫化視覺語言研究", "漫畫", `${assetBase}comic/`],
+  ["AUDIO NOTE 01", "《第九次出生》Podcast「Tell」節目企劃啟動", "播客", `${assetBase}podcast/`],
   ["STUDIO NOTE 01", "一條龍原創 IP 製作架構正式公開", "工作室", `${assetBase}#ip-journey`],
 ] as const;
 
@@ -39,7 +40,7 @@ export default function Home() {
           <div className="studio-hero-copy">
             <div className="eyebrow"><span />BÐ-STUDIO · ORIGINAL IP ENGINE</div>
             <h1 id="studio-hero-title">從一部小說，<br /><em>開始一座宇宙。</em></h1>
-            <p>比爸工作室以創辦人的原創小說為起點，依序發展成漫畫、影集與電影。每一次轉譯，都讓故事被更完整地看見。</p>
+            <p>比爸工作室以創辦人的原創小說為起點，依序發展成播客、影集與電影。每一次轉譯，都讓故事被更完整地看見。</p>
             <div className="hero-actions">
               <a className="primary-cta" href="#ip-journey">探索 IP 路徑 <ArrowDown size={17} /></a>
               <a className="quiet-link" href={`${assetBase}original/`}>從《第九次出生》開始 <ArrowUpRight size={15} /></a>
@@ -50,7 +51,7 @@ export default function Home() {
             <img src={`${assetBase}assets/hero-cosmos.webp`} alt="抽象宇宙軌道構成的比爸工作室原創世界" />
             <OrbitalCanvas />
             <div className="orbit-caption"><span className="status-dot" />INTERACTIVE IP MAP · DRAG TO EXPLORE</div>
-            <div className="orbit-legend"><span>ORIGINAL</span><i /><span>COMIC</span><i /><span>SERIES</span><i /><span>FILM</span><i /><span>MERCH</span></div>
+            <div className="orbit-legend"><span>ORIGINAL</span><i /><span>PODCAST</span><i /><span>SERIES</span><i /><span>FILM</span><i /><span>MERCH</span></div>
           </div>
         </section>
 
@@ -85,7 +86,7 @@ export default function Home() {
           <div><p className="eyebrow"><span />HOW WE BUILD</p><h2 id="principles-title">一條龍，不代表匆忙。<br /><em>代表每一步都能回到故事。</em></h2></div>
           <div className="principle-list">
             <article><span>01</span><h3>原作優先</h3><p>先讓人物、制度與世界觀在文字中長出完整的根，再開始決定它要如何被看見。</p></article>
-            <article><span>02</span><h3>媒介有自己的語言</h3><p>漫畫、影集與電影不是重複內容；它們各自承擔最適合的節奏、距離與情感張力。</p></article>
+            <article><span>02</span><h3>媒介有自己的語言</h3><p>播客、影集與電影不是重複內容；它們各自承擔最適合的節奏、距離與情感張力。</p></article>
             <article><span>03</span><h3>長期，而非一次性</h3><p>以能持續發展的 IP 思維累積作品資產，也替每次回到這個世界的讀者保留入口。</p></article>
           </div>
         </section>
