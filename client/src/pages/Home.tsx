@@ -1,15 +1,16 @@
 /** BÐ-Studio visual reminder: studio-first, product-clear, literary at its core—one original world travelling across four intentional formats. */
 import OrbitalCanvas from "@/components/OrbitalCanvas";
 import OriginalMark from "@/components/OriginalMark";
+import SeriesMark from "@/components/SeriesMark";
 import StageHeader from "@/components/StageHeader";
-import { ArrowDown, ArrowUpRight, BookOpenText, Clapperboard, Handshake, Layers3, Mail, Play, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BookOpenText, Clapperboard, Handshake, Layers3, Mail, Sparkles } from "lucide-react";
 
 const assetBase = import.meta.env.BASE_URL;
 
 const mediaStages = [
   { number: "01", title: "原作", english: "ORIGINAL", description: "小說是世界觀、角色弧線與每一次改編選擇的起點。", status: "連載中", href: `${assetBase}original/`, icon: OriginalMark },
   { number: "02", title: "漫畫", english: "COMIC", description: "讓沉默、速度與未知，在一格一格的觀看中被感覺。", status: "視覺開發", href: `${assetBase}comic/`, icon: Layers3 },
-  { number: "03", title: "影集", english: "SERIES", description: "讓角色有足夠時間，走過每一季的選擇與代價。", status: "企劃開發", href: `${assetBase}series/`, icon: Play },
+  { number: "03", title: "影集", english: "SERIES", description: "讓角色有足夠時間，走過每一季的選擇與代價。", status: "企劃開發", href: `${assetBase}series/`, icon: SeriesMark },
   { number: "04", title: "電影", english: "FILM", description: "把被共同見證的命題，濃縮成一次不可替代的銀幕觀看。", status: "長期開發", href: `${assetBase}film/`, icon: Clapperboard },
 ];
 
