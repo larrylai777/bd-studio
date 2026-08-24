@@ -1,10 +1,11 @@
 /** BÐ-Studio visual reminder: every page is a clear, calm production station—not a marketing promise, but an honest view of work in progress. */
+import FilmMark from "@/components/FilmMark";
 import MerchMark from "@/components/MerchMark";
 import OriginalMark from "@/components/OriginalMark";
 import PodcastMark from "@/components/PodcastMark";
 import SeriesMark from "@/components/SeriesMark";
 import StageHeader from "@/components/StageHeader";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, CircleDot, Clapperboard } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, CircleDot } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const assetBase = import.meta.env.BASE_URL;
@@ -30,7 +31,7 @@ export type MediaStageData = {
   steps: { label: string; detail: string; state: "done" | "active" | "next" }[];
 };
 
-const icons = { original: OriginalMark, podcast: PodcastMark, series: SeriesMark, film: Clapperboard, merch: MerchMark };
+const icons = { original: OriginalMark, podcast: PodcastMark, series: SeriesMark, film: FilmMark, merch: MerchMark };
 const pipeline = [
   ["01", "原作", "original"], ["02", "播客", "podcast"], ["03", "影集", "series"], ["04", "電影", "film"], ["05", "周邊", "merch"],
 ] as const;

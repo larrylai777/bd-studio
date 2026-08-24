@@ -1,11 +1,12 @@
 /** BÐ-Studio visual reminder: studio-first, product-clear, literary at its core—one original world travelling across four intentional formats. */
 import OrbitalCanvas from "@/components/OrbitalCanvas";
+import FilmMark from "@/components/FilmMark";
 import MerchMark from "@/components/MerchMark";
 import OriginalMark from "@/components/OriginalMark";
 import PodcastMark from "@/components/PodcastMark";
 import SeriesMark from "@/components/SeriesMark";
 import StageHeader from "@/components/StageHeader";
-import { ArrowDown, ArrowUpRight, BookOpenText, Clapperboard, Handshake, Mail, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BookOpenText, Handshake, Mail, Sparkles } from "lucide-react";
 
 const assetBase = import.meta.env.BASE_URL;
 
@@ -13,7 +14,7 @@ const mediaStages = [
   { number: "01", title: "原作", english: "ORIGINAL", description: "小說是世界觀、角色弧線與每一次改編選擇的起點。", status: "連載中", href: `${assetBase}original/`, icon: OriginalMark },
   { number: "02", title: "播客", english: "PODCAST", description: "Tell 用聲音談創作選擇，讓世界觀在文字之外被重新說一次。", status: "節目籌備中", href: `${assetBase}podcast/`, icon: PodcastMark },
   { number: "03", title: "影集", english: "SERIES", description: "讓角色有足夠時間，走過每一季的選擇與代價。", status: "企劃開發", href: `${assetBase}series/`, icon: SeriesMark },
-  { number: "04", title: "電影", english: "FILM", description: "把被共同見證的命題，濃縮成一次不可替代的銀幕觀看。", status: "長期開發", href: `${assetBase}film/`, icon: Clapperboard },
+  { number: "04", title: "電影", english: "FILM", description: "寧靜喵 CALMCAT 把被共同見證的命題，濃縮成一次不可替代的銀幕觀看。", status: "長期開發", href: `${assetBase}film/`, icon: FilmMark },
   { number: "05", title: "周邊", english: "MERCH", description: "拉力一方 L&F 把世界觀與角色記憶，做成可以帶著走的實體物件。", status: "商品開發中", href: `${assetBase}merch/`, icon: MerchMark },
 ];
 
