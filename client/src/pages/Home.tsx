@@ -3,7 +3,7 @@
  * Keep the centered original b/D hammer logo, black utility header, full-bleed media hero, and poster grid.
  */
 import { useState } from "react";
-import { ArrowRight, Menu, Search, X } from "lucide-react";
+import { ArrowRight, CircleUserRound, Menu, Search, X } from "lucide-react";
 import { toast } from "sonner";
 
 const assetBase = import.meta.env.BASE_URL;
@@ -33,15 +33,31 @@ export default function Home() {
   return (
     <div className="entertainment-site" id="top">
       <header className="entertainment-header">
-        <button className="header-icon" onClick={() => { setMenuOpen((value) => !value); setSearchOpen(false); }} aria-label="開啟網站選單" aria-expanded={menuOpen}>
-          {menuOpen ? <X size={29} /> : <Menu size={31} />}
-        </button>
-        <a className="center-logo" href="#top" aria-label="回到 BÐ-Studio 首頁">
-          <img src={assets.logo} alt="BÐ-Studio b／D 交叉鐵鎚標誌" />
-        </a>
-        <button className="header-icon" onClick={() => { setSearchOpen((value) => !value); setMenuOpen(false); }} aria-label="開啟搜尋" aria-expanded={searchOpen}>
-          <Search size={29} />
-        </button>
+        <div className="mobile-header-row">
+          <button className="header-icon" onClick={() => { setMenuOpen((value) => !value); setSearchOpen(false); }} aria-label="開啟網站選單" aria-expanded={menuOpen}>
+            {menuOpen ? <X size={29} /> : <Menu size={31} />}
+          </button>
+          <a className="center-logo" href="#top" aria-label="回到 BÐ-Studio 首頁">
+            <img src={assets.logo} alt="BÐ-Studio b／D 交叉鐵鎚標誌" />
+          </a>
+          <button className="header-icon" onClick={() => { setSearchOpen((value) => !value); setMenuOpen(false); }} aria-label="開啟搜尋" aria-expanded={searchOpen}>
+            <Search size={29} />
+          </button>
+        </div>
+        <div className="desktop-utility">
+          <div className="utility-group utility-left">
+            <button onClick={() => notify("登入") }><CircleUserRound size={20} />登入</button>
+            <button onClick={() => notify("訂閱訊號")}>訂閱訊號</button>
+          </div>
+          <a className="desktop-brand-logo" href="#top" aria-label="回到 BÐ-Studio 首頁"><img src={assets.logo} alt="BÐ-Studio b／D 交叉鐵鎚標誌" /></a>
+          <div className="utility-group utility-right">
+            <button className="support-link" onClick={() => notify("支持連載")}>支持連載</button>
+            <button className="desktop-search" onClick={() => setSearchOpen((value) => !value)} aria-label="開啟搜尋"><Search size={24} /></button>
+          </div>
+        </div>
+        <nav className="desktop-primary" aria-label="桌面主要導覽">
+          {["原作", "播客", "影集", "電影", "周邊", "製作日誌", "關於工作室", "更多"].map((item) => <a href="#catalog" key={item}>{item}</a>)}
+        </nav>
         {menuOpen && <nav className="header-panel menu-panel" aria-label="主要導覽">
           {menuItems.map((item, index) => <a href={index === 0 ? "#top" : "#catalog"} onClick={() => setMenuOpen(false)} key={item}><span>0{index + 1}</span>{item}<ArrowRight size={17} /></a>)}
         </nav>}
