@@ -11,9 +11,10 @@ const navigation = [
   ["漫畫", `${assetBase}comic/`, "comic"],
   ["影集", `${assetBase}series/`, "series"],
   ["電影", `${assetBase}film/`, "film"],
+  ["周邊", `${assetBase}merch/`, "merch"],
 ] as const;
 
-export default function StageHeader({ current }: { current: "studio" | "original" | "comic" | "series" | "film" | "other" }) {
+export default function StageHeader({ current }: { current: "studio" | "original" | "comic" | "series" | "film" | "merch" | "other" }) {
   const [open, setOpen] = useState(false);
 
   return (

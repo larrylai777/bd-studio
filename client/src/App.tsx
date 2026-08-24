@@ -6,6 +6,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Comic from "./pages/Comic";
 import Film from "./pages/Film";
 import Home from "./pages/Home";
+import Merch from "./pages/Merch";
 import Original from "./pages/Original";
 import Privacy from "./pages/Privacy";
 import Series from "./pages/Series";
@@ -27,6 +28,8 @@ function Router() {
     "/bd-studio/series": Series,
     "/film": Film,
     "/bd-studio/film": Film,
+    "/merch": Merch,
+    "/bd-studio/merch": Merch,
     "/privacy": Privacy,
     "/bd-studio/privacy": Privacy,
     "/terms": Terms,

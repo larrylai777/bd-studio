@@ -1,5 +1,6 @@
 /** BÐ-Studio visual reminder: studio-first, product-clear, literary at its core—one original world travelling across four intentional formats. */
 import OrbitalCanvas from "@/components/OrbitalCanvas";
+import MerchMark from "@/components/MerchMark";
 import OriginalMark from "@/components/OriginalMark";
 import SeriesMark from "@/components/SeriesMark";
 import StageHeader from "@/components/StageHeader";
@@ -12,6 +13,7 @@ const mediaStages = [
   { number: "02", title: "漫畫", english: "COMIC", description: "讓沉默、速度與未知，在一格一格的觀看中被感覺。", status: "視覺開發", href: `${assetBase}comic/`, icon: Layers3 },
   { number: "03", title: "影集", english: "SERIES", description: "讓角色有足夠時間，走過每一季的選擇與代價。", status: "企劃開發", href: `${assetBase}series/`, icon: SeriesMark },
   { number: "04", title: "電影", english: "FILM", description: "把被共同見證的命題，濃縮成一次不可替代的銀幕觀看。", status: "長期開發", href: `${assetBase}film/`, icon: Clapperboard },
+  { number: "05", title: "周邊", english: "MERCH", description: "拉力一方把世界觀與角色記憶，做成可以帶著走的實體物件。", status: "商品開發中", href: `${assetBase}merch/`, icon: MerchMark },
 ];
 
 const journal = [
@@ -48,7 +50,7 @@ export default function Home() {
             <img src={`${assetBase}assets/hero-cosmos.webp`} alt="抽象宇宙軌道構成的比爸工作室原創世界" />
             <OrbitalCanvas />
             <div className="orbit-caption"><span className="status-dot" />INTERACTIVE IP MAP · DRAG TO EXPLORE</div>
-            <div className="orbit-legend"><span>ORIGINAL</span><i /><span>COMIC</span><i /><span>SERIES</span><i /><span>FILM</span></div>
+            <div className="orbit-legend"><span>ORIGINAL</span><i /><span>COMIC</span><i /><span>SERIES</span><i /><span>FILM</span><i /><span>MERCH</span></div>
           </div>
         </section>
 
@@ -59,7 +61,7 @@ export default function Home() {
         </section>
 
         <section className="journey-section" id="ip-journey" aria-labelledby="journey-title">
-          <div className="section-topline"><div><p className="eyebrow"><span />THE BÐ IP JOURNEY</p><h2 id="journey-title">一個世界，<br /><em>四個抵達方式。</em></h2></div><p>你可以從任何一站走進這個宇宙；每一頁都會告訴你它此刻正在被如何製作，以及故事接下來要往哪裡去。</p></div>
+          <div className="section-topline"><div><p className="eyebrow"><span />THE BÐ IP JOURNEY</p><h2 id="journey-title">一個世界，<br /><em>五個抵達方式。</em></h2></div><p>你可以從任何一站走進這個宇宙；每一頁都會告訴你它此刻正在被如何製作，以及故事接下來要往哪裡去。</p></div>
           <div className="journey-rail">
             <div className="rail-line" />
             {mediaStages.map((stage, index) => {
