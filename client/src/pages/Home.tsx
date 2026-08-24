@@ -90,6 +90,7 @@ export default function Home() {
           <div className="hero-noise" />
           <img src={visualAssets.hero} alt="淡紫色宇宙軌道與光點的抽象背景" className="hero-art" />
           <OrbitalCanvas />
+          <div className="orbit-hint" aria-hidden="true"><span className="orbit-hint-dot" />DRAG TO ROTATE · 3D STAR MAP</div>
           <div className="hero-copy">
             <div className="hero-eyebrow"><span />比爸 BD · 科幻懸疑長篇</div>
             <h1><span>第九次</span><span>出生</span></h1>

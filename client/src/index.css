@@ -110,7 +110,10 @@
   .hero-art { position: absolute; z-index: -4; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: .58; mix-blend-mode: multiply; filter: saturate(.75) contrast(.9); }
   .dark .hero-art { opacity: .2; mix-blend-mode: screen; filter: saturate(.65) brightness(.8); }
   .hero-noise { position: absolute; z-index: -3; inset: 0; pointer-events: none; opacity: .35; background-image: radial-gradient(circle at 85% 26%, rgba(166, 148, 209, .24) 0 2px, transparent 3px), linear-gradient(95deg, transparent 0 48%, color-mix(in srgb, #9a8fc7 11%, transparent) 48.07%, transparent 48.15%); background-size: 190px 190px, 100% 100%; }
-  .orbital-canvas { position: absolute; z-index: -2; inset: 0 0 0 37%; pointer-events: none; opacity: .88; }
+  .orbital-canvas { position: absolute; z-index: 1; inset: 0 0 0 37%; pointer-events: auto; opacity: .88; }
+  .orbital-canvas canvas { width: 100%; height: 100%; outline: none; }
+  .orbit-hint { position: absolute; z-index: 2; top: clamp(76px, 9vw, 108px); right: 5.2vw; display: flex; align-items: center; gap: 8px; padding: 7px 9px; border: 1px solid color-mix(in srgb, var(--border) 76%, transparent); background: color-mix(in srgb, var(--background) 60%, transparent); backdrop-filter: blur(8px); font-family: "DM Mono", monospace; font-size: 8px; letter-spacing: .08em; color: var(--muted-foreground); pointer-events: none; }
+  .orbit-hint-dot { width: 5px; height: 5px; border-radius: 50%; background: #c9ad66; box-shadow: 0 0 0 3px color-mix(in srgb, #c9ad66 15%, transparent); }
   .hero-copy { position: relative; z-index: 2; max-width: 650px; animation: rise-in 680ms var(--ease-out) both; }
   .hero-eyebrow, .section-kicker { display: flex; align-items: center; gap: 11px; font-family: "DM Mono", monospace; font-size: 10px; letter-spacing: .12em; color: var(--muted-foreground); }
   .hero-eyebrow span { display: inline-block; width: 28px; height: 1px; background: #9a8fc7; }
@@ -210,6 +213,7 @@
     .hero-section { min-height: 720px; padding: 73px 20px 48px; }
     .hero-art { object-position: 62% center; opacity: .44; }
     .orbital-canvas { inset: 0 -20% 10% 12%; opacity: .62; }
+    .orbit-hint { top: 18px; right: 20px; font-size: 7px; }
     .hero-copy { max-width: 100%; }
     .hero-copy h1 { font-size: clamp(72px, 24vw, 118px); letter-spacing: -.15em; }
     .hero-copy p { max-width: 330px; margin-top: 29px; font-size: 15px; line-height: 1.95; }
