@@ -1,6 +1,7 @@
 /** BÐ-Studio visual reminder: every page is a clear, calm production station—not a marketing promise, but an honest view of work in progress. */
+import OriginalMark from "@/components/OriginalMark";
 import StageHeader from "@/components/StageHeader";
-import { ArrowLeft, ArrowRight, ArrowUpRight, Check, CircleDot, Clapperboard, Layers3, PenTool, Play } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Check, CircleDot, Clapperboard, Layers3, Play } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const assetBase = import.meta.env.BASE_URL;
@@ -22,10 +23,11 @@ export type MediaStageData = {
   next: string;
   nextHref: string;
   icon: LucideIcon;
+  signatureMark?: string;
   steps: { label: string; detail: string; state: "done" | "active" | "next" }[];
 };
 
-const icons = { original: PenTool, comic: Layers3, series: Play, film: Clapperboard };
+const icons = { original: OriginalMark, comic: Layers3, series: Play, film: Clapperboard };
 const pipeline = [
   ["01", "原作", "original"], ["02", "漫畫", "comic"], ["03", "影集", "series"], ["04", "電影", "film"],
 ] as const;
@@ -47,7 +49,7 @@ export default function MediaStage({ data }: { data: MediaStageData }) {
           <p className="media-description">{data.description}</p>
           <div className="media-actions"><a className="primary-cta" href="#work">查看目前工作 <ArrowRight size={17} /></a><a className="quiet-link" href={assetBase}><ArrowLeft size={15} />回到工作室</a></div>
         </div>
-        <figure className="media-hero-visual"><img src={`${assetBase}${data.image}`} alt={data.imageAlt} /><figcaption><span>{data.english} / BÐ-STUDIO</span><span>{data.focal}</span></figcaption><div className="visual-index">{data.index}</div></figure>
+        <figure className="media-hero-visual"><img src={`${assetBase}${data.image}`} alt={data.imageAlt} /><figcaption><span>{data.english} / BÐ-STUDIO</span><span>{data.focal}</span></figcaption><div className="visual-index">{data.index}</div>{data.signatureMark && <img className="media-signature" src={`${assetBase}${data.signatureMark}`} alt="" aria-hidden="true" />}</figure>
       </section>
 
       <section className="media-now" id="work" aria-label={`${data.label}目前工作`}>
