@@ -1,7 +1,7 @@
 /** BÐ-Studio visual reminder: studio-first, product-clear, literary at its core—one original world travelling across four intentional formats. */
 import OrbitalCanvas from "@/components/OrbitalCanvas";
 import StageHeader from "@/components/StageHeader";
-import { ArrowDown, ArrowUpRight, BookOpenText, Clapperboard, Layers3, Play, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, BookOpenText, Clapperboard, Handshake, Layers3, Mail, Play, Sparkles } from "lucide-react";
 
 const assetBase = import.meta.env.BASE_URL;
 
@@ -13,9 +13,15 @@ const mediaStages = [
 ];
 
 const journal = [
-  ["FIELD NOTE 04", "第四部《第一次出生》持續連載", "原作"],
-  ["VISUAL NOTE 01", "《第九次出生》漫畫化視覺語言研究", "漫畫"],
-  ["STUDIO NOTE 01", "一條龍原創 IP 製作架構正式公開", "工作室"],
+  ["FIELD NOTE 04", "第四部《第一次出生》持續連載", "原作", `${assetBase}original/`],
+  ["VISUAL NOTE 01", "《第九次出生》漫畫化視覺語言研究", "漫畫", `${assetBase}comic/`],
+  ["STUDIO NOTE 01", "一條龍原創 IP 製作架構正式公開", "工作室", `${assetBase}#ip-journey`],
+] as const;
+
+const engagements = [
+  { icon: BookOpenText, label: "追蹤旗艦 IP", detail: "跟著《第九次出生》，從連載章節開始認識這個世界。", cta: "前往原作", href: `${assetBase}original/` },
+  { icon: Mail, label: "訂閱開發日誌", detail: "每一個媒介轉譯的節點，都會先公開在這裡。", cta: "查看日誌", href: `${assetBase}#journal` },
+  { icon: Handshake, label: "洽談改編合作", detail: "無論是出版、製作或發行，我們樂於討論下一步。", cta: "hello@bd-studio.tw", href: "mailto:hello@bd-studio.tw" },
 ];
 
 export default function Home() {
@@ -82,7 +88,12 @@ export default function Home() {
 
         <section className="journal-section" id="journal" aria-labelledby="journal-title">
           <div className="journal-heading"><div><p className="eyebrow"><span />STUDIO JOURNAL</p><h2 id="journal-title">開發，正在發生。</h2></div><p>這裡記錄故事在不同媒介之間移動的每一個節點。</p></div>
-          <div className="journal-list">{journal.map(([code, title, category]) => <a href={`${assetBase}original/`} key={code}><span>{code}</span><strong>{title}</strong><small>{category}</small><ArrowUpRight size={17} /></a>)}</div>
+          <div className="journal-list">{journal.map(([code, title, category, href]) => <a href={href} key={code}><span>{code}</span><strong>{title}</strong><small>{category}</small><ArrowUpRight size={17} /></a>)}</div>
+        </section>
+
+        <section className="engage-section" aria-labelledby="engage-title">
+          <div className="section-topline"><div><p className="eyebrow"><span />JOIN THE STUDIO</p><h2 id="engage-title">你可以，<br /><em>從這裡開始參與。</em></h2></div><p>無論是讀者、創作夥伴或發行方，都有一條清楚的入口。</p></div>
+          <div className="engage-list">{engagements.map(({ icon: Icon, label, detail, cta, href }) => <a className="engage-card" href={href} key={label}><Icon size={20} strokeWidth={1.5} /><h3>{label}</h3><p>{detail}</p><span>{cta} <ArrowUpRight size={14} /></span></a>)}</div>
         </section>
       </main>
       <footer className="studio-footer"><div><span>© 2026 BÐ-STUDIO · 比爸工作室</span><span>FROM PAGE TO SCREEN</span></div><a href="#top">回到頂端 <ArrowUpRight size={14} /></a></footer>
