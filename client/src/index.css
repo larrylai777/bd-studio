@@ -267,6 +267,18 @@
   .media-return a { display: inline-flex; align-items: center; gap: 7px; color: var(--muted-foreground); font-size: 12px; text-decoration: none; }
   .media-return a:hover { color: var(--ink-blue); }
 
+  /* Legal pages */
+  .legal-hero { padding: clamp(96px, 11vw, 160px) clamp(20px, 8vw, 142px) 0; }
+  .legal-hero h1 { max-width: 620px; margin: 22px 0 0; font-family: "Noto Serif TC", serif; font-size: clamp(34px, 4.6vw, 52px); font-weight: 800; line-height: 1.22; letter-spacing: -.06em; }
+  .legal-updated { margin: 18px 0 0; color: var(--muted-foreground); font-family: "DM Mono", monospace; font-size: 11px; letter-spacing: .06em; }
+  .legal-body { max-width: 720px; margin: 0 auto; padding: 56px clamp(20px, 8vw, 142px) clamp(90px, 10vw, 150px); }
+  .legal-body section { padding-top: 30px; margin-top: 30px; border-top: 1px solid var(--border); }
+  .legal-body section:first-child { padding-top: 0; margin-top: 0; border-top: 0; }
+  .legal-body h2 { margin: 0 0 14px; font-family: "Noto Serif TC", serif; font-size: 20px; font-weight: 700; letter-spacing: -.04em; }
+  .legal-body p { margin: 12px 0 0; color: var(--secondary-foreground); font-size: 14px; line-height: 1.9; }
+  .legal-body p:first-child { margin-top: 0; }
+  .legal-body ul { display: grid; gap: 10px; margin: 14px 0 0; padding-left: 20px; color: var(--secondary-foreground); font-size: 14px; line-height: 1.85; }
+
   @keyframes float-in { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 
   @media (max-width: 900px) {
@@ -319,7 +331,8 @@
     .journal-list small { grid-column: 1; }
     .journal-list svg { grid-column: 2; grid-row: 1 / span 3; }
     .studio-footer { min-height: 94px; align-items: center; padding: 0 20px; }
-    .studio-footer div span:last-child { display: none; }
+    .studio-footer div { flex-wrap: wrap; row-gap: 6px; }
+    .studio-footer .footer-tagline { display: none; }
 
     .media-hero { grid-template-columns: 1fr; gap: 39px; padding: 73px 20px 61px; }
     .media-status { margin-top: 25px; }

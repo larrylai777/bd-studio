@@ -98,7 +98,7 @@ export default function Home() {
           <div className="engage-list">{engagements.map(({ icon: Icon, label, detail, cta, href }) => <a className="engage-card" href={href} key={label}><Icon size={20} strokeWidth={1.5} /><h3>{label}</h3><p>{detail}</p><span>{cta} <ArrowUpRight size={14} /></span></a>)}</div>
         </section>
       </main>
-      <footer className="studio-footer"><div><span>© 2026 BÐ-STUDIO · 比爸工作室</span><span>FROM PAGE TO SCREEN</span></div><a href="#top">回到頂端 <ArrowUpRight size={14} /></a></footer>
+      <footer className="studio-footer"><div><span>© 2026 BÐ-STUDIO · 比爸工作室</span><span className="footer-tagline">FROM PAGE TO SCREEN</span><a href={`${assetBase}privacy/`}>隱私權政策</a><a href={`${assetBase}terms/`}>服務條款</a></div><a href="#top">回到頂端 <ArrowUpRight size={14} /></a></footer>
     </div>
   );
 }

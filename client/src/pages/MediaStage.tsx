@@ -65,6 +65,6 @@ export default function MediaStage({ data }: { data: MediaStageData }) {
       <nav className="pipeline-nav" aria-label="完整 IP 製作路徑"><span>THE BÐ IP JOURNEY</span>{pipeline.map(([number, label, slug]) => <a key={slug} href={`${assetBase}${slug}/`} className={slug === data.slug ? "active" : ""}><small>{number}</small><strong>{label}</strong>{slug === data.slug && <CircleDot size={12} />}</a>)}</nav>
       <div className="media-return"><a href={`${assetBase}${previous[2]}/`}><ArrowLeft size={15} />上一站：{previous[1]}</a><a href={assetBase}>回到 BÐ-Studio <ArrowUpRight size={15} /></a></div>
     </main>
-    <footer className="studio-footer"><div><span>© 2026 BÐ-STUDIO · 比爸工作室</span><span>ORIGINAL IP, FROM PAGE TO SCREEN</span></div><a href={assetBase}>回到工作室 <ArrowUpRight size={14} /></a></footer>
+    <footer className="studio-footer"><div><span>© 2026 BÐ-STUDIO · 比爸工作室</span><span className="footer-tagline">ORIGINAL IP, FROM PAGE TO SCREEN</span><a href={`${assetBase}privacy/`}>隱私權政策</a><a href={`${assetBase}terms/`}>服務條款</a></div><a href={assetBase}>回到工作室 <ArrowUpRight size={14} /></a></footer>
   </div>;
 }

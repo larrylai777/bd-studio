@@ -7,7 +7,9 @@ import Comic from "./pages/Comic";
 import Film from "./pages/Film";
 import Home from "./pages/Home";
 import Original from "./pages/Original";
+import Privacy from "./pages/Privacy";
 import Series from "./pages/Series";
+import Terms from "./pages/Terms";
 
 /** BÐ-Studio visual reminder: a calm editorial archive that gives narrative and reading actions clear precedence. */
 
@@ -25,6 +27,10 @@ function Router() {
     "/bd-studio/series": Series,
     "/film": Film,
     "/bd-studio/film": Film,
+    "/privacy": Privacy,
+    "/bd-studio/privacy": Privacy,
+    "/terms": Terms,
+    "/bd-studio/terms": Terms,
   };
   const Page = routes[normalizedPath] ?? NotFound;
   return <Page />;

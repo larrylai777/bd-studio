@@ -13,7 +13,7 @@ const navigation = [
   ["電影", `${assetBase}film/`, "film"],
 ] as const;
 
-export default function StageHeader({ current }: { current: "studio" | "original" | "comic" | "series" | "film" }) {
+export default function StageHeader({ current }: { current: "studio" | "original" | "comic" | "series" | "film" | "other" }) {
   const [open, setOpen] = useState(false);
 
   return (
