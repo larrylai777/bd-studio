@@ -66,3 +66,6 @@
 - [x] 為首頁與主要媒介頁建立具關鍵字意圖的頁面標題、描述、canonical 與 Open Graph 分享中繼資料。
 - [x] 為 BÐ-Studio、原創小說《第九次出生》與比爸說播客加入 JSON-LD 結構化資料。
 - [x] 新增 robots.txt、sitemap.xml 與靜態輸出驗證，並同步 main 與 gh-pages。
+- [x] 規劃 BÐ-Studio 的品牌詞、作品詞、題材詞與內容型搜尋查詢追蹤架構。
+- [x] 撰寫首頁與主要媒介頁可用於搜尋摘要的中文描述優化文案。
+- [x] 整理 Google Search Console 的初期檢查節奏、查詢篩選方式與內容迭代準則。
