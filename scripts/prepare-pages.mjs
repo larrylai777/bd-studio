@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const outputDir = resolve("dist/public");
 const indexFile = resolve(outputDir, "index.html");
-const staticRoutes = ["original", "podcast", "merch", "support", "privacy", "terms"];
+const staticRoutes = ["original", "read", "podcast", "merch", "support", "privacy", "terms"];
 const siteUrl = "https://larrylai777.github.io/bd-studio";
 const defaultImage = `${siteUrl}/assets/bd-hero-ninth-birth.jpg`;
 
@@ -28,6 +28,7 @@ const pages = {
     image: `${siteUrl}/assets/ninth-birth-cover.png`,
     schema: { "@context": "https://schema.org", "@type": "Book", name: "第九次出生", inLanguage: "zh-Hant", genre: ["科幻小說", "懸疑小說"], url: `${siteUrl}/original/`, image: `${siteUrl}/assets/ninth-birth-cover.png`, publisher: { "@type": "Organization", name: "BÐ-Studio" } },
   },
+  read: { title: "閱讀《第九次出生》｜BÐ-Studio 原創小說", description: "閱讀 BÐ-Studio 原創科幻懸疑小說《第九次出生》第一部至第四部的完整公開章節。", image: `${siteUrl}/assets/ninth-birth-cover.png`, noindex: true },
   podcast: {
     title: "比爸說播客 BÐ Tell｜《第九次出生》聲音故事｜BÐ-Studio",
     description: "收聽比爸說播客 BÐ Tell，從《第九次出生》的故事、角色與世界觀出發，走進原創科幻與記憶輪迴的聲音宇宙。",

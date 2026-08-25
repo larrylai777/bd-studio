@@ -7,11 +7,12 @@ import Home from "./pages/Home";
 import Merch from "./pages/Merch";
 import Original from "./pages/Original";
 import Podcast from "./pages/Podcast";
+import Reader from "./pages/Reader";
 import Support from "./pages/Support";
 
 function Router() {
   const path = window.location.pathname.replace(/^\/bd-studio\/?/, "/").replace(/\/+$/, "") || "/";
-  const routes: Record<string, React.ComponentType> = { "/": Home, "/original": Original, "/podcast": Podcast, "/merch": Merch, "/support": Support };
+  const routes: Record<string, React.ComponentType> = { "/": Home, "/original": Original, "/read": Reader, "/podcast": Podcast, "/merch": Merch, "/support": Support };
   const Page = routes[path] ?? Home;
   return <Page />;
 }
