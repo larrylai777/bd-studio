@@ -1,15 +1,20 @@
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const sourceDir = "/home/ubuntu/bd-novel";
 const targetDir = resolve("client/src/data");
-const sourceFiles = ["reading.html", ...Array.from({ length: 29 }, (_, index) => `reading-ch${index + 2}.html`)];
+const sourceFiles = readdirSync(sourceDir)
+  .filter((name) => /^reading(?:-ch\d+)?\.html$/.test(name))
+  .sort((left, right) => {
+    const chapterOf = (name) => name === "reading.html" ? 1 : Number(name.match(/reading-ch(\d+)\.html/)?.[1] ?? 0);
+    return chapterOf(left) - chapterOf(right);
+  });
 
 const partSpecs = [
   { number: 1, title: "第九門", start: 1, end: 9, status: "已完結", description: "從出生警報開始，林澈在第九次人生裡重新遇見母親、記憶署與那扇不該存在的門。" },
   { number: 2, title: "黑河低語", start: 10, end: 18, status: "已完結", description: "門後的世界把記憶推進黑市、圖書館與名字法院，所有被保留或被刪除的事都開始索取代價。" },
   { number: 3, title: "十八歲倒數", start: 19, end: 27, status: "已完結", description: "名字庫的真相逐步浮現；林澈必須在十八分鐘與十八年之間，找回被系統奪走的自我。" },
-  { number: 4, title: "第一次出生", start: 28, end: 30, status: "連載中", description: "黎明之後，第一張名單與自願整理站帶來新的選擇；第九次出生仍在持續展開。" },
+  { number: 4, title: "第一次出生", start: 28, end: 37, status: "已完結", description: "黎明之後，名冊、溫序的提議與十七萬人的選擇讓第九次人生走向最終的回答。" },
 ];
 
 function decodeEntities(value) {

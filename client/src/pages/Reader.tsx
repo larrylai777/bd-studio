@@ -4,9 +4,11 @@ import { useEffect, useMemo, useState } from "react";
 import { SiteFooter, SiteHeader, assetBase } from "@/components/SiteShell";
 import { getPartForChapter, loadNovelPart, novelParts, type NovelPart } from "@/data/ninthBirthIndex";
 
+const MAX_CHAPTER = novelParts.at(-1)?.end ?? 1;
+
 function readChapterFromUrl() {
   const number = Number(new URLSearchParams(window.location.search).get("chapter"));
-  return Number.isInteger(number) && number >= 1 && number <= 30 ? number : 1;
+  return Number.isInteger(number) && number >= 1 && number <= MAX_CHAPTER ? number : 1;
 }
 
 export default function Reader() {
@@ -16,7 +18,7 @@ export default function Reader() {
   const currentPart = useMemo(() => getPartForChapter(chapterNumber), [chapterNumber]);
   const chapter = part?.chapters.find((item) => item.number === chapterNumber);
   const previous = chapterNumber > 1 ? chapterNumber - 1 : null;
-  const next = chapterNumber < 30 ? chapterNumber + 1 : null;
+  const next = chapterNumber < MAX_CHAPTER ? chapterNumber + 1 : null;
 
   useEffect(() => {
     let active = true;
@@ -47,7 +49,7 @@ export default function Reader() {
 
       <div className="reader-frame">
         <aside className={`reader-toc ${tocOpen ? "is-open" : ""}`} aria-label="小說章節目錄">
-          <div className="reader-toc-heading"><div><p>FULL TEXT ARCHIVE</p><strong>四部 · 三十章</strong></div><button onClick={() => setTocOpen(false)} aria-label="關閉章節目錄"><X size={18} /></button></div>
+          <div className="reader-toc-heading"><div><p>FULL TEXT ARCHIVE</p><strong>四部 · {MAX_CHAPTER}章</strong></div><button onClick={() => setTocOpen(false)} aria-label="關閉章節目錄"><X size={18} /></button></div>
           {novelParts.map((partMeta) => <section key={partMeta.id}>
             <div className="reader-part-heading"><span>VOL. 0{partMeta.number}</span><strong>第{["一", "二", "三", "四"][partMeta.number - 1]}部・{partMeta.title}</strong><em>{partMeta.status}</em></div>
             {partMeta.chapters.map((item) => <a className={item.number === chapterNumber ? "active" : ""} href={readerHref(item.number)} key={item.id} onClick={() => setTocOpen(false)}><span>{String(item.number).padStart(2, "0")}</span>{item.title.replace(/^第[一二三四五六七八九十]+章：/, "")}</a>)}

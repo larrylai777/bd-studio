@@ -218,9 +218,9 @@ export const novelParts = [
     "number": 4,
     "title": "第一次出生",
     "start": 28,
-    "end": 30,
-    "status": "連載中",
-    "description": "黎明之後，第一張名單與自願整理站帶來新的選擇；第九次出生仍在持續展開。",
+    "end": 37,
+    "status": "已完結",
+    "description": "黎明之後，名冊、溫序的提議與十七萬人的選擇讓第九次人生走向最終的回答。",
     "chapters": [
       {
         "id": "chapter-28",
@@ -239,6 +239,48 @@ export const novelParts = [
         "number": 30,
         "title": "第三十章：自願整理站",
         "partLabel": "第四部：第一次出生"
+      },
+      {
+        "id": "chapter-31",
+        "number": 31,
+        "title": "第三十一章：阿飛的母親",
+        "partLabel": "第四部：第一次出生"
+      },
+      {
+        "id": "chapter-32",
+        "number": 32,
+        "title": "第三十二章：名冊",
+        "partLabel": "第四部：第一次出生"
+      },
+      {
+        "id": "chapter-33",
+        "number": 33,
+        "title": "第三十三章：溫序的提議",
+        "partLabel": "第四部：第一次出生"
+      },
+      {
+        "id": "chapter-34",
+        "number": 34,
+        "title": "第三十四章：林若曦的殘響",
+        "partLabel": "第四部：第一次出生"
+      },
+      {
+        "id": "chapter-35",
+        "number": 35,
+        "title": "第三十五章：十七萬人",
+        "partLabel": "第四部：第一次出生"
+      },
+      {
+        "id": "chapter-36",
+        "number": 36,
+        "title": "第三十六章：白司禮的宣告",
+        "partLabel": "第四部：第一次出生"
+      },
+      {
+        "id": "chapter-37",
+        "number": 37,
+        "title": "第三十七章：第九次出生",
+        "partLabel": "第四部：第一次出生 · 全書完結"
       }
     ]
   }
