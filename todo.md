@@ -87,6 +87,6 @@
 - [x] 將 BÐ-novel 的小說資料與全部章節內容轉為 BÐ-Studio 可維護的站內靜態內容結構。
 - [x] 在原作頁建立四部作品導覽與站內閱讀器，沿用 BÐ-Studio 現有視覺系統。
 - [x] 驗證全章節連結、閱讀導覽、SEO 與 GitHub Pages 發布後同步 main 與 gh-pages。
-- [ ] 重新盤點 BÐ-novel 的所有公開閱讀頁，與 BÐ-Studio 已匯入章節逐一比對。
-- [ ] 將任何遺漏或新增的章節納入 BÐ-Studio 四部小說資料與站內閱讀器。
-- [ ] 驗證章節總數、部別範圍、全章節閱讀連結與 GitHub Pages 發布後同步 main 與 gh-pages。
+- [x] 重新盤點 BÐ-novel 的所有公開閱讀頁，與 BÐ-Studio 已匯入章節逐一比對。
+- [x] 將任何遺漏或新增的章節納入 BÐ-Studio 四部小說資料與站內閱讀器。
+- [x] 驗證章節總數、部別範圍、全章節閱讀連結與 GitHub Pages 發布後同步 main 與 gh-pages。
