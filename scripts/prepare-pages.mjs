@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const outputDir = resolve("dist/public");
 const indexFile = resolve(outputDir, "index.html");
-const staticRoutes = ["original", "podcast", "series", "film", "merch", "journal", "studio", "support", "more", "privacy", "terms"];
+const staticRoutes = ["original", "podcast", "merch", "journal", "studio", "support", "more", "privacy", "terms"];
 const siteUrl = "https://larrylai777.github.io/bd-studio";
 const defaultImage = `${siteUrl}/assets/bd-hero-ninth-birth.jpg`;
 
@@ -13,13 +13,13 @@ const organization = {
   name: "BÐ-Studio",
   url: `${siteUrl}/`,
   logo: `${siteUrl}/assets/bd-original-hammer-logo-transparent.png`,
-  description: "以原創故事為核心，發展小說、播客、影集、電影與周邊的跨媒介創作工作室。",
+  description: "以原創故事為核心，發展小說、播客、周邊與持續展開的故事企劃之創作工作室。",
 };
 
 const pages = {
   root: {
     title: "BÐ-Studio｜第九次出生：原創小說、播客與影像 IP",
-    description: "BÐ-Studio 以原創科幻小說《第九次出生》為起點，延伸至播客、影集、電影與周邊，持續建立跨媒介敘事宇宙。",
+    description: "BÐ-Studio 以原創科幻小說《第九次出生》為起點，延伸至播客、周邊與持續展開的故事企劃。",
     schema: { "@context": "https://schema.org", "@type": "WebSite", name: "BÐ-Studio", url: `${siteUrl}/`, inLanguage: "zh-Hant", publisher: organization },
   },
   original: {
@@ -34,11 +34,9 @@ const pages = {
     image: `${siteUrl}/assets/bd-podcast-stage.jpg`,
     schema: { "@context": "https://schema.org", "@type": "PodcastEpisode", name: "第六集《地下學校》—《第九次出生》", description: "比爸說播客 BÐ Tell 的《第九次出生》單集，探索火星、記憶清除與第九次人生的真相。", url: `${siteUrl}/podcast/`, partOfSeries: { "@type": "PodcastSeries", name: "比爸說播客 BÐ Tell" }, inLanguage: "zh-Hant" },
   },
-  series: { title: "《第九次出生》影集企劃｜BÐ-Studio", description: "探索《第九次出生》的影集世界觀、角色命題與開發進度。", schema: { "@context": "https://schema.org", "@type": "CreativeWork", name: "第九次出生影集企劃", creator: organization, inLanguage: "zh-Hant" } },
-  film: { title: "《第九次出生》電影企劃｜BÐ-Studio", description: "BÐ-Studio 電影企劃：將《第九次出生》的科幻懸疑世界帶往大銀幕。", image: `${siteUrl}/assets/bd-film-stage.jpg`, schema: { "@context": "https://schema.org", "@type": "Movie", name: "第九次出生電影企劃", productionCompany: organization, inLanguage: "zh-Hant" } },
   merch: { title: "BÐ-Studio 周邊企劃｜第九次出生收藏", description: "探索 BÐ-Studio 與《第九次出生》的限量周邊、實體收藏與開發訊號。", schema: { "@context": "https://schema.org", "@type": "CollectionPage", name: "BÐ-Studio 周邊企劃", isPartOf: `${siteUrl}/` } },
-  journal: { title: "BÐ-Studio 製作日誌｜第九次出生跨媒介開發", description: "追蹤《第九次出生》從原作到聲音、影集與電影的製作進度與創作筆記。", schema: { "@context": "https://schema.org", "@type": "Blog", name: "BÐ-Studio 製作日誌", publisher: organization, inLanguage: "zh-Hant" } },
-  studio: { title: "關於 BÐ-Studio｜原創跨媒介故事工作室", description: "認識 BÐ-Studio：以原創故事為起點，讓小說、播客、影集、電影與實體企劃彼此承接。", schema: organization },
+  journal: { title: "BÐ-Studio 製作日誌｜第九次出生跨媒介開發", description: "追蹤《第九次出生》從原作到聲音與延伸企劃的製作進度、世界觀設定與創作筆記。", schema: { "@context": "https://schema.org", "@type": "Blog", name: "BÐ-Studio 製作日誌", publisher: organization, inLanguage: "zh-Hant" } },
+  studio: { title: "關於 BÐ-Studio｜原創跨媒介故事工作室", description: "認識 BÐ-Studio：以原創故事為起點，讓小說、播客、周邊與延伸企劃彼此承接。", schema: organization },
   support: { title: "支持 BÐ-Studio｜陪《第九次出生》繼續連載", description: "支持 BÐ-Studio 的原創故事創作，陪《第九次出生》持續向下一種媒介前進。", schema: { "@context": "https://schema.org", "@type": "WebPage", name: "支持 BÐ-Studio" } },
   more: { title: "更多 BÐ-Studio｜創作宇宙入口", description: "探索更多 BÐ-Studio 的創作入口與最新訊號。", noindex: true },
   privacy: { title: "隱私權政策｜BÐ-Studio", description: "BÐ-Studio 隱私權政策。", noindex: true },
