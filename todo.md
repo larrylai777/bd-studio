@@ -63,3 +63,6 @@
 - [x] 將播客導航與首頁入口改回 BÐ-Studio 原生播客分頁，不再導向獨立整頁播放器 HTML。
 - [x] 在播客頁「第一季節目架構」黑色目前進度卡中嵌入指定單集的 Apple Podcasts 播放器 HTML。
 - [x] 驗證 Apple Podcasts 內嵌播放器與既有播客頁在行動版可讀後，同步 main 與 gh-pages。
+- [ ] 為首頁與主要媒介頁建立具關鍵字意圖的頁面標題、描述、canonical 與 Open Graph 分享中繼資料。
+- [ ] 為 BÐ-Studio、原創小說《第九次出生》與比爸說播客加入 JSON-LD 結構化資料。
+- [ ] 新增 robots.txt、sitemap.xml 與靜態輸出驗證，並同步 main 與 gh-pages。
