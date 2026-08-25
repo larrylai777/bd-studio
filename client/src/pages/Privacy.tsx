@@ -38,7 +38,7 @@ export default function Privacy() {
       },
       {
         title: "聯絡我們",
-        body: ["若你對本政策有任何疑問，歡迎寄信至 hello@bd-studio.tw。"],
+        body: ["若你對本政策有任何疑問，歡迎寄信至 bbdaddy924@gmail.com。"],
       },
     ]}
   />;

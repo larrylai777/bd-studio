@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 
 const outputDir = resolve("dist/public");
 const indexFile = resolve(outputDir, "index.html");
-const staticRoutes = ["original", "podcast", "merch", "journal", "studio", "support", "more", "privacy", "terms"];
+const staticRoutes = ["original", "podcast", "merch", "journal", "studio", "support", "privacy", "terms"];
 const siteUrl = "https://larrylai777.github.io/bd-studio";
 const defaultImage = `${siteUrl}/assets/bd-hero-ninth-birth.jpg`;
 
@@ -38,7 +38,6 @@ const pages = {
   journal: { title: "BÐ-Studio 製作日誌｜第九次出生跨媒介開發", description: "追蹤《第九次出生》從原作到聲音與延伸企劃的製作進度、世界觀設定與創作筆記。", schema: { "@context": "https://schema.org", "@type": "Blog", name: "BÐ-Studio 製作日誌", publisher: organization, inLanguage: "zh-Hant" } },
   studio: { title: "關於 BÐ-Studio｜原創跨媒介故事工作室", description: "認識 BÐ-Studio：以原創故事為起點，讓小說、播客、周邊與延伸企劃彼此承接。", schema: organization },
   support: { title: "支持 BÐ-Studio｜陪《第九次出生》繼續連載", description: "支持 BÐ-Studio 的原創故事創作，陪《第九次出生》持續向下一種媒介前進。", schema: { "@context": "https://schema.org", "@type": "WebPage", name: "支持 BÐ-Studio" } },
-  more: { title: "更多 BÐ-Studio｜創作宇宙入口", description: "探索更多 BÐ-Studio 的創作入口與最新訊號。", noindex: true },
   privacy: { title: "隱私權政策｜BÐ-Studio", description: "BÐ-Studio 隱私權政策。", noindex: true },
   terms: { title: "使用條款｜BÐ-Studio", description: "BÐ-Studio 使用條款。", noindex: true },
 };

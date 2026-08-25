@@ -6,7 +6,6 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Journal from "./pages/Journal";
 import Merch from "./pages/Merch";
-import More from "./pages/More";
 import Original from "./pages/Original";
 import Podcast from "./pages/Podcast";
 import Studio from "./pages/Studio";
@@ -14,7 +13,7 @@ import Support from "./pages/Support";
 
 function Router() {
   const path = window.location.pathname.replace(/^\/bd-studio\/?/, "/").replace(/\/+$/, "") || "/";
-  const routes: Record<string, React.ComponentType> = { "/": Home, "/original": Original, "/podcast": Podcast, "/merch": Merch, "/journal": Journal, "/studio": Studio, "/support": Support, "/more": More };
+  const routes: Record<string, React.ComponentType> = { "/": Home, "/original": Original, "/podcast": Podcast, "/merch": Merch, "/journal": Journal, "/studio": Studio, "/support": Support };
   const Page = routes[path] ?? Home;
   return <Page />;
 }

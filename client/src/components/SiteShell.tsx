@@ -15,7 +15,7 @@ export const assets = {
 
 const links = [
   ["原作", `${assetBase}original/`], ["播客", `${assetBase}podcast/`], ["周邊", `${assetBase}merch/`],
-  ["製作日誌", `${assetBase}journal/`], ["關於工作室", `${assetBase}studio/`], ["更多", `${assetBase}more/`],
+  ["製作日誌", `${assetBase}journal/`], ["關於工作室", `${assetBase}studio/`],
 ] as const;
 
 type Current = "home" | "original" | "podcast" | "series" | "film" | "merch" | "journal" | "studio" | "support" | "more";
@@ -48,7 +48,7 @@ export function SiteFooter() {
   return <footer className="site-footer-expanded">
     <section className="footer-main">
       <div className="footer-identity"><img src={assets.logo} alt="BÐ-Studio b／D 交叉鐵鎚標誌" /><div><strong>BÐ-STUDIO</strong><span>ORIGINAL IP / FROM PAGE TO EVERYWHERE</span></div></div>
-      <nav className="footer-links" aria-label="頁尾導覽"><a href={`${assetBase}studio/`}>關於工作室</a><a href={`${assetBase}journal/`}>製作日誌</a><a href={`${assetBase}support/`}>支持連載</a><a href="mailto:hello@bd-studio.tw">合作洽談</a></nav>
+      <nav className="footer-links" aria-label="頁尾導覽"><a href={`${assetBase}studio/`}>關於工作室</a><a href={`${assetBase}journal/`}>製作日誌</a><a href={`${assetBase}support/`}>支持連載</a><a href="mailto:bbdaddy924@gmail.com">合作洽談</a></nav>
       <div className="footer-social"><p>FOLLOW BÐ-STUDIO</p><div>{social.map(([mark, label]) => <button aria-label={label} title={label} onClick={() => notice(label)} key={label}>{mark}</button>)}</div></div>
     </section>
     <div className="footer-legal"><span>© 2026 BÐ-STUDIO. ALL SIGNALS RESERVED.</span><span>隱私權政策　服務條款</span><a href="#top">BACK TO TOP ↑</a></div>

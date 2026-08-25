@@ -1,4 +1,4 @@
 import { ArrowRight } from "lucide-react";
 import { SiteFooter, SiteHeader, assetBase } from "@/components/SiteShell";
-const items = [["支持連載","為作品的下一段開發留下支持訊號。",`${assetBase}support/`],["合作洽談","出版、製作、發行與跨媒體合作。","mailto:hello@bd-studio.tw"],["工作室","從原作到每一種媒介的製作方法。",`${assetBase}studio/`]];
+const items = [["支持連載","為作品的下一段開發留下支持訊號。",`${assetBase}support/`],["合作洽談","出版、製作、發行與跨媒體合作。","mailto:bbdaddy924@gmail.com"],["工作室","從原作到每一種媒介的製作方法。",`${assetBase}studio/`]];
 export default function More() { return <div className="page-shell" id="top"><SiteHeader current="more" /><main className="text-page"><section className="text-hero"><p className="eyebrow">MORE FROM BÐ-STUDIO</p><h1>更多<br /><em>入口。</em></h1><p>所有還在擴張中的路徑，都從這裡進入。</p></section><section className="more-list">{items.map(([title, copy, href], index) => <a href={href} key={title}><span>0{index + 1}</span><div><h2>{title}</h2><p>{copy}</p></div><ArrowRight size={23} /></a>)}</section></main><SiteFooter /></div>; }

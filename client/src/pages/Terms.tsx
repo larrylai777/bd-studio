@@ -35,7 +35,7 @@ export default function Terms() {
       },
       {
         title: "聯絡我們",
-        body: ["若你對本條款有任何疑問，歡迎寄信至 hello@bd-studio.tw。"],
+        body: ["若你對本條款有任何疑問，歡迎寄信至 bbdaddy924@gmail.com。"],
       },
     ]}
   />;
